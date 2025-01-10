@@ -11,7 +11,7 @@
         <img src="image.jpg" alt="Main Image" id="bcg-image">
         <div class="title-container">
             <img src="odin-logo.png" alt="Odin Title Image" id="odin-image">
-            <h1 id="main-title">Odin</h1>
+            <h1 id="main-title">ODIN</h1>
         </div>
     </aside>
     <main>
@@ -31,12 +31,12 @@
 
                 <div class="input-container">
                     <label for="first-name">First Name</label>
-                    <input placeholder="First Name" id="first-name" type="text">
+                    <input required minlength="1" placeholder="First Name" id="first-name" type="text">
                 </div>
 
                 <div class="input-container">
                     <label for="last-name">Last Name</label>
-                    <input placeholder="Last Name" id="last-name" type="text">
+                    <input required minlength="1" placeholder="Last Name" id="last-name" type="text">
                 </div>
 
                 <div class="input-container">
@@ -51,12 +51,12 @@
 
                 <div class="input-container">
                     <label for="password">Password</label>
-                    <input placeholder="Password" id="password" type="password" required>
+                    <input max-length="20" minlength="8" placeholder="Password" id="password" type="password" required>
                 </div>
                 
                 <div class="input-container">
                     <label for="confirm-password">Confirm Password</label>
-                    <input placeholder="Password Confirmation" id="confirm-password" type="password" required>
+                    <input max-length="20" minlength="8" placeholder="Confirm" id="confirm-password" type="password" required>
                 </div>
 
             </fieldset>
@@ -65,7 +65,7 @@
         </form>
 
         <p class="log-in-text">
-            Already have an account? <a href="#" target="_self">Log in</a>
+            Already have an account? <a rel="noopener noreferrer" href="#" target="_self">Log in</a>
         </p>
     </main>
 </body>

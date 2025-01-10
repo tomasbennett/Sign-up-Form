@@ -8,20 +8,65 @@
 </head>
 <body>
     <aside class="image-title-container">
-        <img src="" alt="" id="bcg-image">
+        <img src="image.jpg" alt="Main Image" id="bcg-image">
         <div class="title-container">
-            <img src="" alt="" id="odin-image">
-            <h1 id="main-title"></h1>
+            <img src="odin-logo.png" alt="Odin Title Image" id="odin-image">
+            <h1 id="main-title">Odin</h1>
         </div>
     </aside>
     <main>
         <div class="description-container">
-            <p class="upper-description"></p>
-            <p class="lower-description"></p>
+            <p class="description-upper-child">
+                This is not a real online service! You know you need something 
+                like this in your life to help you realise your deepest dreams. 
+                Sign up <em>now</em> to get started.
+            </p>
+            <p class="description-lower-child">
+                You <em>know</em> you want to.
+            </p>
         </div>
         <form action="" method="get">
+            <fieldset>
+                <h3>Let's do this!</h3>
 
+                <div class="input-container">
+                    <label for="first-name">First Name</label>
+                    <input placeholder="First Name" id="first-name" type="text">
+                </div>
+
+                <div class="input-container">
+                    <label for="last-name">Last Name</label>
+                    <input placeholder="Last Name" id="last-name" type="text">
+                </div>
+
+                <div class="input-container">
+                    <label for="email">@</label>
+                    <input placeholder="Email Address" id="email" type="email" required>
+                </div>
+
+                <div class="input-container">
+                    <label for="phone-number">Phone Number</label>
+                    <input placeholder="Phone Number" id="phone-number" type="text" required>
+                </div>
+
+                <div class="input-container">
+                    <label for="password">Password</label>
+                    <input placeholder="Password" id="password" type="password" required>
+                </div>
+                
+                <div class="input-container">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input placeholder="Password Confirmation" id="confirm-password" type="password" required>
+                </div>
+
+            </fieldset>
+
+            <button type="submit">Create Account</button>
         </form>
+
+        <p class="log-in-text">
+            Already have an account? <a href="#" target="_self">Log in</a>
+        </p>
     </main>
 </body>
 </html>

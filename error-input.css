@@ -1,0 +1,80 @@
+@keyframes load-out{
+    0%{
+        opacity: 0.5;
+        transform: translateY(-2rem);
+    }
+    
+    25%{
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+
+    75%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
+svg{
+    position: absolute;
+
+    pointer-events: none;
+
+    width: 25rem;
+    height: 5.2rem;
+}
+
+.input-container{
+    position: relative;
+}
+
+.input-container:has(input:user-invalid)::before{
+    position: absolute;
+    
+    pointer-events: none;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--button-background);
+    color: white;
+    border-radius: .5rem;
+    padding: 0 1rem;
+    font-style: italic;
+    font-size: 1.5rem;
+
+    top: -6rem;
+    left: 2rem;
+
+    display: flex;
+    padding-top: .5rem;
+
+    z-index: 2;
+
+    animation: forwards load-out 6s linear;
+
+    clip-path: url(#textBubble);
+}
+
+.input-container:has(#first-name:user-invalid)::before{
+    content: "*First name is mandatory and must contain atleast single letter";
+}
+
+.input-container:has(#last-name:user-invalid)::before{
+    content: "*Last name is mandatory and must contain atleast single letter";
+}
+
+.input-container:has(#email:user-invalid)::before{
+    content: "*Email is mandatory and must be a legitamate email address";
+}
+
+.input-container:has(#password:user-invalid)::before{
+    content: "*Password is mandatory and must contain between 8 and 20 characters";
+}
+
+.input-container:has(#confirm-password:user-invalid)::before{
+    content: "*Password is mandatory and must contain between 8 and 20 characters";
+}

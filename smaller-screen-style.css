@@ -1,21 +1,32 @@
-@media(width <= 70rem){
+@media(width <= 78rem){
     body{
         grid-template-columns: 1fr;
         grid-template-rows: minmax(0, 30rem)
                             minmax(60rem, 1fr);
     }
 
+    aside{
+        align-items: center;
+
+        position: relative;
+    }
+
+
     #bcg-image{
-        object-position: center;
+        /* object-position: center; */
+
+        position: absolute;
     }
 
     .title-container{
-        margin-top: 5rem;
+        margin: 0;
+
+        z-index: 1;
     }
 
 }
 
-@media(width <= 36rem){
+@media(width <= 50rem){
     :root{
         --main-grid-template: 5rem 28rem 1fr;
     }
@@ -24,10 +35,6 @@
         grid-template-columns: 1fr;
         grid-template-rows: minmax(15rem, 30rem)
                             minmax(79.4rem, 1fr);
-    }
-
-    .title-container{
-        margin: 0;
     }
 
     main{

@@ -6,8 +6,30 @@
     <title>Sign-up Form</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="smaller-screen-style.css">
+    <link rel="stylesheet" href="error-input.css">
 </head>
 <body>
+    <svg xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <clipPath id="textBubble" clipPathUnits="objectBoundingBox">
+                <path transform="scale(0.004, 0.0192307692)" d="M 5 0
+                C 2.23 0 0 2.23 0 5
+                L 0 40
+                C 0 42.77 2.23 45 5 45
+                L 17.953125 45
+                L 24.664062 52
+                L 31.375 45
+                L 245 45
+                C 247.77 45 250 42.77 250 40
+                L 250 5
+                C 250 2.23 247.77 0 245 0
+                L 5 0
+                z"></path>
+            </clipPath>
+        </defs>
+    </svg>
+
+
     <aside class="image-title-container">
         <img src="image.jpg" alt="Main Image" id="bcg-image">
         <div class="title-container">
@@ -32,8 +54,7 @@
 
                 <div class="input-container">
                     <label for="first-name">First Name</label>
-                    <input required minlength="1" placeholder="First Name" id="first-name" type="text"
-                    title="Your first name is required and must contain more than one letter">
+                    <input required minlength="1" placeholder="First Name" id="first-name" type="text">
                 </div>
 
                 <div class="input-container">
@@ -42,14 +63,14 @@
                 </div>
 
                 <div class="input-container">
-                    <label for="email">@</label>
+                    <label for="email">Email Address</label>
                     <input required pattern="[A-Za-z0-9\-_+.]+@[a-z]+\.[a-z.]{2,}"
                     placeholder="Email Address" id="email" type="text">
                 </div>
 
                 <div class="input-container">
                     <label for="phone-number">Phone Number</label>
-                    <input placeholder="Phone Number" id="phone-number" type="text" required>
+                    <input placeholder="Phone Number" id="phone-number" type="text">
                 </div>
 
                 <div class="input-container">

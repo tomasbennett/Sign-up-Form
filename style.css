@@ -1,3 +1,13 @@
+@font-face {
+    font-family: "Custom-font";
+    src: url("./Norse-Bold.otf") format("opentype"); 
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
 :root{
     font-size: 62.5%;
 
@@ -67,7 +77,7 @@ aside{
     align-items: center;
     justify-content: center;
 
-
+    font-family: "Custom-font", sans-serif;
 }
 
 

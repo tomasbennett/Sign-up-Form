@@ -29,7 +29,8 @@ body{
     width: 100vw;
     height: 100vh;
 
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
 
     font-size: 1.6rem;
     background-color: rgb(219, 219, 219);
@@ -37,6 +38,8 @@ body{
     display: grid;
     grid-template-columns: minmax(0, 60rem) minmax(60rem, 1fr);
     /* grid-template-rows: 100vh; */
+
+    
 }
 
 /* Left side of the full width sign-in form screen */

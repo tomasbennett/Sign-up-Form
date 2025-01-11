@@ -1,0 +1,53 @@
+@media(width <= 70rem){
+    body{
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(0, 30rem)
+                            minmax(60rem, 1fr);
+    }
+
+    #bcg-image{
+        object-position: center;
+    }
+
+    .title-container{
+        margin-top: 5rem;
+    }
+
+}
+
+@media(width <= 36rem){
+    :root{
+        --main-grid-template: 5rem 28rem 1fr;
+    }
+
+    body{
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(15rem, 30rem)
+                            minmax(79.4rem, 1fr);
+    }
+
+    .title-container{
+        margin: 0;
+    }
+
+    main{
+        grid-template-areas: ". description description"
+                             "form form form "
+                             ". log-in .";
+    
+    }
+
+    fieldset{
+        height: 52rem;
+
+        grid-template-areas: ". header ."
+                             ". first-name ."
+                             ". last-name ."
+                             ". email ."
+                             ". phone-number ."
+                             ". password ."
+                             ". confirm-password .";
+    }
+
+
+}

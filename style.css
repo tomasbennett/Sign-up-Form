@@ -25,8 +25,8 @@ body{
     background-color: rgb(219, 219, 219);
 
     display: grid;
-    grid-template-columns: minmax(0, 65rem) minmax(65rem, 1fr);
-    grid-template-rows: 100vh;
+    grid-template-columns: minmax(0, 60rem) minmax(60rem, 1fr);
+    /* grid-template-rows: 100vh; */
 }
 
 /* Left side of the full width sign-in form screen */
@@ -45,6 +45,7 @@ aside{
     height: 100%;
 
     object-fit: cover;
+    object-position: right;
 }
 
 .title-container{
@@ -141,7 +142,7 @@ fieldset{
 .input-container{
     display: flex;
     flex-direction: column;
-    row-gap: .2rem;
+    row-gap: .4rem;
 }
 
 
@@ -252,11 +253,10 @@ button{
 button:hover{
     background-color: #374928;
     box-shadow: .2rem .2rem .4rem .2rem var(--box-shadow-colour);
-    transition: transform 100ms linear;
 }
 
 button:active{
-    transform: scale(90%);
+    transform: scale(92%);
 }
 
 .log-in-text{

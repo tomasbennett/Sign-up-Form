@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up Form</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="smaller-screen-style.css">
 </head>
 <body>
     <aside class="image-title-container">
@@ -25,13 +26,14 @@
                 You <em>know</em> you want to.
             </p>
         </div>
-        <form action="" method="get">
+        <form action="./correct-sign-in.html" method="get">
             <fieldset>
                 <h3>Let's do this!</h3>
 
                 <div class="input-container">
                     <label for="first-name">First Name</label>
-                    <input required minlength="1" placeholder="First Name" id="first-name" type="text">
+                    <input required minlength="1" placeholder="First Name" id="first-name" type="text"
+                    title="Your first name is required and must contain more than one letter">
                 </div>
 
                 <div class="input-container">
@@ -41,7 +43,8 @@
 
                 <div class="input-container">
                     <label for="email">@</label>
-                    <input placeholder="Email Address" id="email" type="email" required>
+                    <input required pattern="[A-Za-z0-9\-_+.]+@[a-z]+\.[a-z.]{2,}"
+                    placeholder="Email Address" id="email" type="text">
                 </div>
 
                 <div class="input-container">
@@ -65,7 +68,7 @@
         </form>
 
         <p class="log-in-text">
-            Already have an account? <a rel="noopener noreferrer" href="#" target="_self">Log in</a>
+            Already have an account? <a rel="noopener noreferrer" href="#" target="_blank">Log in</a>
         </p>
     </main>
 </body>

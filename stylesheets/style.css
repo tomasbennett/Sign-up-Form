@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Custom-font";
-    src: url("./Norse-Bold.otf") format("opentype"); 
+    src: url("../Norse-Bold.otf") format("opentype"); 
     font-weight: normal;
     font-style: normal;
 }
@@ -123,18 +123,28 @@ h3{
 .description-container{
     grid-area: description;
 
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+
+
     width: 80%;
 }
 
-.description-upper-child{
+/* .description-upper-child{
     margin-bottom: 1rem;
-}
+} */
 
+#no-javascript-error{
+    color: rgb(223, 18, 18);
+
+    font-style: italic;
+}
 
 form{
     grid-area: form;
 
-    display: grid;
+    display: none;
     grid-template-columns: subgrid;
     row-gap: 2rem;
 

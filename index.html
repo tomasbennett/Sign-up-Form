@@ -4,10 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up Form</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="smaller-screen-style.css">
-    <link rel="stylesheet" href="error-input.css">
-    <link rel="stylesheet" href="load-in.css">
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <link rel="stylesheet" href="./stylesheets/smaller-screen-style.css">
+    <link rel="stylesheet" href="./stylesheets/error-input.css">
+    <link rel="stylesheet" href="./stylesheets/load-in.css">
+    
+    <script>
+
+        window.addEventListener("DOMContentLoaded", insertContent);
+        function insertContent(){
+            const form = document.querySelector("form");
+            const logInText = document.querySelector(".log-in-text");
+            form.style.display = "grid";
+            logInText.style.display = "block";
+        }
+    </script>
 </head>
 <body>
     <svg xmlns="http://www.w3.org/2000/svg">
@@ -32,17 +43,21 @@
 
 
     <aside class="image-title-container">
-        <img src="image.jpg" alt="Main Image" id="bcg-image">
+        <img src="./images/image.jpg" alt="Main Image" id="bcg-image">
         <div class="title-container">
-            <img src="odin-logo.png" alt="Odin Title Image" id="odin-image">
+            <img src="./images/odin-logo.png" alt="Odin Title Image" id="odin-image">
             <h1 id="main-title">ODIN</h1>
         </div>
     </aside>
     <main>
         <div class="description-container">
+            <noscript>
+                <p id="no-javascript-error">
+                    Please enable javascript in your browser preferences to successfully sign in!
+                </p>
+            </noscript>
             <p class="description-upper-child">
-                This is not a real online service! You know you need something 
-                like this in your life to help you realise your deepest dreams. 
+                This fake online service is not secure using GET to send your information so please do NOT enter any personal or private information! 
                 Sign up <em>now</em> to get started.
             </p>
             <p class="description-lower-child">
@@ -55,33 +70,33 @@
 
                 <div class="input-container">
                     <label for="first-name">First Name</label>
-                    <input required minlength="1" placeholder="First Name" id="first-name" type="text">
+                    <input name="first-name" required minlength="1" placeholder="First Name" id="first-name" type="text">
                 </div>
 
                 <div class="input-container">
                     <label for="last-name">Last Name</label>
-                    <input required minlength="1" placeholder="Last Name" id="last-name" type="text">
+                    <input name="last-name" required minlength="1" placeholder="Last Name" id="last-name" type="text">
                 </div>
 
                 <div class="input-container">
                     <label for="email">Email Address</label>
-                    <input required pattern="[A-Za-z0-9\-_+.]+@[a-z]+\.[a-z.]{2,}"
+                    <input name="email" required pattern="[A-Za-z0-9\-_+.]+@[a-z]+\.[a-z.]{2,}"
                     placeholder="Email Address" id="email" type="text">
                 </div>
 
                 <div class="input-container">
                     <label for="phone-number">Phone Number</label>
-                    <input placeholder="Phone Number" id="phone-number" type="text">
+                    <input name="phone-number" placeholder="Phone Number" id="phone-number" type="text">
                 </div>
 
                 <div class="input-container">
                     <label for="password">Password</label>
-                    <input max-length="20" minlength="8" placeholder="Password" id="password" type="password" required>
+                    <input name="password" max-length="20" minlength="8" placeholder="Password" id="password" type="password" required>
                 </div>
                 
                 <div class="input-container">
                     <label for="confirm-password">Confirm Password</label>
-                    <input max-length="20" minlength="8" placeholder="Confirm" id="confirm-password" type="password" required>
+                    <input name="confirm-password" max-length="20" minlength="8" placeholder="Confirm" id="confirm-password" type="password" required>
                 </div>
 
             </fieldset>
@@ -89,7 +104,7 @@
             <button type="submit">Create Account</button>
         </form>
 
-        <p class="log-in-text">
+        <p class="log-in-text" style="display: none;">
             Already have an account? <a rel="noopener noreferrer" href="#" target="_blank">Log in</a>
         </p>
     </main>

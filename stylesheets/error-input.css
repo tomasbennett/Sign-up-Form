@@ -1,12 +1,12 @@
 @keyframes load-out{
     0%{
         opacity: 0.5;
-        transform: translateY(-2rem);
+        /* transform: translateY(-2rem); */
     }
     
     25%{
         opacity: 1;
-        transform: translateY(0rem);
+        transform: translate(3rem, -3rem);
     }
 
     75%{
@@ -15,6 +15,7 @@
 
     100%{
         opacity: 0;
+        transform: translate(3rem, -3rem);
     }
 }
 
@@ -42,29 +43,32 @@ svg{
     background-color: var(--button-background);
     color: white;
     border-radius: .5rem;
-    padding: 0 1rem;
+    padding: .5rem 1rem 0;
     font-style: italic;
     font-size: 1.5rem;
 
-    top: -6rem;
-    left: 2rem;
+    /* top: -6rem;
+    left: 2rem; */
+    
+    opacity: 0;
+    transform: translate(3rem, -4rem);
 
     display: flex;
-    padding-top: .5rem;
+    /* padding-top: .5rem; */
 
     z-index: 2;
 
-    animation: forwards load-out 6s linear;
+    animation: load-out 7500ms ease-in;
 
     clip-path: url(#textBubble);
 }
 
 .input-container:has(#first-name:user-invalid)::before{
-    content: "*First name is mandatory and must contain atleast single letter";
+    content: "*First name is mandatory and must contain atleast one single letter";
 }
 
 .input-container:has(#last-name:user-invalid)::before{
-    content: "*Last name is mandatory and must contain atleast single letter";
+    content: "*Last name is mandatory and must contain atleast one single letter";
 }
 
 .input-container:has(#email:user-invalid)::before{

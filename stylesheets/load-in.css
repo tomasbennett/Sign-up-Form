@@ -39,6 +39,7 @@ main > *{
 @media(width <= 78rem){
     main > *{
         transform: translate(0rem, 1rem);
+        
     }
 }
 

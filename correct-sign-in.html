@@ -3,9 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <noscript>
+        <meta http-equiv="refresh" content="0;url=./index.html">
+    </noscript>
     <title>Welcome</title>
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <link rel="stylesheet" href="./stylesheets/smaller-screen-style.css">
+    <link rel="stylesheet" href="./stylesheets/load-in.css">
+    
+    
+    <script>
+        const searchParams = new URLSearchParams(window.location.search);
+        if(!paramsCheck("first-name") || !paramsCheck("last-name") || !paramsCheck("email") || !paramsCheck("password") || !paramsCheck("confirm-password")){
+            window.location.href = "./index.html";
+        }
+        
+        const firstName = paramsGet("first-name");
+        const lastName = paramsGet("last-name");
+        const email = paramsGet("email");
+        const password = paramsGet("password");
+        const confirmPassword = paramsGet("confirm-password");
+
+        
+        const newPara = document.createElement("p");
+        newPara.className = "description-container";
+        newPara.textContent = `Congratulations ${firstName} ${lastName} on signing up to this fake online service.`;
+        
+
+        window.addEventListener("DOMContentLoaded", () => {
+            const main = document.querySelector("main");
+            main.appendChild(newPara);
+        });
+
+        function paramsCheck(str){
+            return searchParams.has(str);
+        }
+
+        function paramsGet(str){
+            return searchParams.get(str);
+        }
+
+    </script>
 </head>
 <body>
-    Welcome
+    <aside style="background-color: #00a169;"> 
+
+        <?xml version="1.0" encoding="UTF-8" standalone="no"?>
+        <!-- Created with Inkscape (http://www.inkscape.org/) -->
+    
+        <svg
+            viewBox="500 100 1000 700"
+            preserveAspectRatio="slice"
+            version="1.1"
+            id="bcg-image"
+            inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+            sodipodi:docname="checkMark.svg"
+            xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+            xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:svg="http://www.w3.org/2000/svg">
+            <defs
+                id="defs1">
+                <inkscape:path-effect
+                effect="skeletal"
+                id="path-effect10"
+                is_visible="true"
+                lpeversion="1"
+                pattern="m 526.20911,2757.9003 108.1303,-744.4109 h -216.26 z"
+                copytype="repeated_stretched"
+                prop_scale="1"
+                scale_y_rel="false"
+                spacing="50"
+                normal_offset="0"
+                tang_offset="0"
+                prop_units="false"
+                vertical_pattern="false"
+                hide_knot="false"
+                fuse_tolerance="5.3" />
+                <linearGradient
+                id="linearGradient5">
+                <stop
+                    style="stop-color:#00a169;stop-opacity:0.89883268;"
+                    offset="0"
+                    id="stop7" />
+                <stop
+                    style="stop-color:#00a169;stop-opacity:0.21789883;"
+                    offset="1"
+                    id="stop8" />
+                </linearGradient>
+                <linearGradient
+                id="linearGradient5-1">
+                <stop
+                    style="stop-color:#00a169;stop-opacity:1;"
+                    offset="0"
+                    id="stop5" />
+                <stop
+                    style="stop-color:#00a169;stop-opacity:0.07291666;"
+                    offset="1"
+                    id="stop6" />
+                </linearGradient>
+            </defs>
+            <g
+                inkscape:label="Layer 1"
+                inkscape:groupmode="layer"
+                id="layer1">
+                <path
+                style="fill:#00a169;fill-opacity:1;stroke:none;stroke-width:8.24648;stroke-dasharray:none;stroke-opacity:1"
+                id="path10"
+                inkscape:path-effect="#path-effect10"
+                sodipodi:type="arc"
+                sodipodi:cx="1090.7795"
+                sodipodi:cy="2481.5481"
+                sodipodi:rx="252.77759"
+                sodipodi:ry="252.77759"
+                d="m 990.94397,2415.2056 c 219.16923,110.1099 382.61053,329.7354 429.63643,590.7477 172.3334,-106.9839 280.6486,-291.7067 295.1822,-524.4052 -255.4038,116.3489 -519.7192,74.0058 -724.81863,-66.3425 z m 130.84523,-45.3701 c -29.6035,245.6753 -197.44589,459.7655 -435.39856,581.5829 105.22835,90.0579 243.3151,145.0526 404.38886,155.1127 71.6247,-4.4734 138.7041,-17.8318 200.3703,-39.2073 -112.2513,-120.8619 -184.3393,-265.2658 -200.3703,-419.0538 -10.0101,-94.7374 1.4754,-188.8388 31.0097,-278.4345 z m 83.6488,92.1354 c -54.8131,13.6264 -110.8741,20.4021 -167.341,19.5772 -193.77022,-2.743 -374.84849,-94.8587 -515.65864,-245.3898 -31.61102,73.5805 -51.05516,155.9407 -56.64186,245.3898 8.94689,143.2493 53.43366,268.3176 126.51678,368.2614 138.33984,-229.2468 362.94376,-381.2356 613.12472,-387.8386 z m -55.683,122.5364 c -106.5275,-181.0861 -138.4696,-399.5092 -58.9755,-613.9004 14.3816,-37.2418 32.0017,-73.6694 52.6156,-109.0647 -17.2481,-2.2004 -34.7911,-3.8639 -52.6156,-4.9771 -214.87397,13.4203 -388.84065,106.8054 -498.46558,256.7207 257.05779,66.8962 465.58078,244.199 557.44108,471.2215 z m -147.5653,-18.9668 c 171.5246,-179.2106 423.8412,-278.5504 688.8211,-237.3317 -56.3075,-208.9235 -199.5153,-362.99 -399.8599,-432.4361 17.9999,265.7768 -98.5495,511.742 -288.9612,669.7678 z"
+                transform="matrix(2.4252783,0,0,2.4252783,-1685.444,-5545.9447)" />
+                <circle
+                style="fill:#ffffff;stroke:#00a169;stroke-width:20;stroke-dasharray:none;stroke-opacity:1"
+                id="path1"
+                cx="960"
+                cy="472.5"
+                r="371.39127" />
+                <g
+                id="g4">
+                <circle
+                    style="fill:#00a169;fill-opacity:1;stroke:none;stroke-width:20;stroke-dasharray:none;stroke-opacity:1"
+                    id="path2"
+                    cx="960"
+                    cy="472.5"
+                    r="341.29892" />
+                <path
+                    id="rect3"
+                    style="fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:20;stroke-dasharray:none;stroke-opacity:1"
+                    d="M 1111.1133,312.33885 869.47852,553.97558 808.88477,493.38184 769.54299,532.7256 869.47852,632.66115 1150.457,351.68263 Z" />
+                </g>
+            </g>
+        </svg>
+    </aside>
+    <main></main>
+    <style>
+        /* svg{
+            transform-origin: center;
+        }
+
+        #path10{
+            animation: full-rotation 8s linear infinite;
+            transform-origin: 50% 50%;
+        }
+
+        @keyframes full-rotation {
+            to{
+                transform: rotate(360deg);
+            }
+        } */
+    </style>
 </body>
 </html>
